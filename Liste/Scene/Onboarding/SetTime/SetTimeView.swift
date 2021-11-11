@@ -8,7 +8,6 @@
 import UIKit
 
 class SetTimeView: UIView, CodeView {
-    
     init() {
         super.init(frame: .zero)
         self.setupView()

@@ -20,7 +20,7 @@ class OnboardingCoordinator: Coordinator {
     }
         
     func start() {
-        navigate(to: .welcome)
+        navigate(to: .setRoutine)
     }
     
     func navigate(to route: Route) {
