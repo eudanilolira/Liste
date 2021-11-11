@@ -22,7 +22,7 @@ class MainCoordinator: Coordinator {
     
     required init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
-        navigationController.setNavigationBarHidden(true, animated: true)
+//        navigationController.setNavigationBarHidden(true, animated: true)
     }
 
     func start() {
