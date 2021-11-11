@@ -80,7 +80,6 @@
 				9F0471572739F88D0099A5E5 /* Assets.xcassets */,
 				9F0471592739F88D0099A5E5 /* LaunchScreen.storyboard */,
 				9F04715C2739F88D0099A5E5 /* Info.plist */,
-				9F0471542739F88B0099A5E5 /* Liste.xcdatamodeld */,
 			);
 			path = Liste;
 			sourceTree = "<group>";
@@ -97,6 +96,7 @@
 		9F0471672739FB470099A5E5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F0471542739F88B0099A5E5 /* Liste.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
