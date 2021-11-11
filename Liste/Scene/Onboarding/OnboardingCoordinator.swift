@@ -50,7 +50,23 @@ class OnboardingCoordinator: Coordinator {
         case .setRoutine:
             let vc = SetRoutineViewController(viewModel: .init(coordinator: self))
             navigationController.pushViewController(vc, animated: true)
-        
+            
+        case .setSleepTime:  //TODO: Set views properties
+            let vc = SetTimeViewController(viewModel: .init(coordinator: self))
+            navigationController.pushViewController(vc, animated: true)
+            
+        case .setFunTime:  //TODO: Set views properties
+            let vc = SetTimeViewController(viewModel: .init(coordinator: self))
+            navigationController.pushViewController(vc, animated: true)
+            
+        case .setSportsTime:  //TODO: Set views properties
+            let vc = SetTimeViewController(viewModel: .init(coordinator: self))
+            navigationController.pushViewController(vc, animated: true)
+            
+        case .setStudyTime: //TODO: Set views properties
+            let vc = SetTimeViewController(viewModel: .init(coordinator: self))
+            navigationController.pushViewController(vc, animated: true)
+
         case .allReady:
             createOnboardingIntroVC(
                 title: "Estamos prontos!",
@@ -88,6 +104,10 @@ extension OnboardingCoordinator {
         case knowYourPriorities
         case rememberToDeliver
         case setRoutine
+        case setSleepTime
+        case setStudyTime
+        case setFunTime
+        case setSportsTime
         case allReady
         case dismiss
     }
