@@ -11,7 +11,7 @@ class OnboardingView: UIView, CodeView {
     private let imageView: UIImageView = UIImageView()
     private let titleView: UILabel = UILabel()
     private let subtitleView: UILabel = UILabel()
-    let buttonView: UIButton = UIButton()
+    let buttonView = ButtonComponent(title: "Definir minha rotina")
     
 
     var title: String? {
@@ -58,7 +58,6 @@ class OnboardingView: UIView, CodeView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         titleView.translatesAutoresizingMaskIntoConstraints = false
         subtitleView.translatesAutoresizingMaskIntoConstraints = false
-        buttonView.translatesAutoresizingMaskIntoConstraints = false
         
         let constraints = [
             imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 200),
@@ -72,14 +71,10 @@ class OnboardingView: UIView, CodeView {
             subtitleView.topAnchor.constraint(equalTo: titleView.bottomAnchor, constant: 24),
             subtitleView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             subtitleView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.9),
-            
-            buttonView.topAnchor.constraint(equalTo: subtitleView.bottomAnchor, constant: 74),
-            buttonView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            buttonView.heightAnchor.constraint(equalToConstant: 51),
-            buttonView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.9),
         ]
         
         NSLayoutConstraint.activate(constraints)
+        buttonView.setConstraints()
     }
     
     func setupAdditionalConfiguration() {
@@ -91,12 +86,5 @@ class OnboardingView: UIView, CodeView {
         
         imageView.contentMode = .scaleAspectFill
         self.backgroundColor = .white
-        
-        buttonView.setTitle("Definir minha rotina", for: .normal)
-        buttonView.backgroundColor = .orange
-        buttonView.titleLabel?.font = .systemFont(ofSize: 20)
-        buttonView.titleLabel?.textColor = .black
-        buttonView.layer.cornerRadius = 10
-        
     }
 }
