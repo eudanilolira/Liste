@@ -16,6 +16,12 @@
 		9F0471662739F9320099A5E5 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0471652739F9320099A5E5 /* CodeView.swift */; };
 		9F04716B273A08910099A5E5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F04716A273A08910099A5E5 /* MainCoordinator.swift */; };
 		9F04716D273A08F80099A5E5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F04716C273A08F80099A5E5 /* Coordinator.swift */; };
+		9F951984273D41E10071D2E5 /* SetRoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F951983273D41E10071D2E5 /* SetRoutineView.swift */; };
+		9F951986273D41EB0071D2E5 /* SetRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F951985273D41EB0071D2E5 /* SetRoutineViewController.swift */; };
+		9F951988273D41F50071D2E5 /* SetRoutineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F951987273D41F50071D2E5 /* SetRoutineViewModel.swift */; };
+		9F95198B273D45F00071D2E5 /* SetTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95198A273D45F00071D2E5 /* SetTimeView.swift */; };
+		9F95198D273D45FB0071D2E5 /* SetTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95198C273D45FB0071D2E5 /* SetTimeViewController.swift */; };
+		9F95198F273D46050071D2E5 /* SetTimeVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95198E273D46050071D2E5 /* SetTimeVIewModel.swift */; };
 		9FA7C4B1273B4B26009B62E3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7C4B0273B4B26009B62E3 /* OnboardingViewController.swift */; };
 		9FA7C4B3273B4B2F009B62E3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7C4B2273B4B2F009B62E3 /* OnboardingView.swift */; };
 		9FA7C4B5273B4B39009B62E3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7C4B4273B4B39009B62E3 /* OnboardingViewModel.swift */; };
@@ -34,6 +40,12 @@
 		9F0471652739F9320099A5E5 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		9F04716A273A08910099A5E5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		9F04716C273A08F80099A5E5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9F951983273D41E10071D2E5 /* SetRoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRoutineView.swift; sourceTree = "<group>"; };
+		9F951985273D41EB0071D2E5 /* SetRoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRoutineViewController.swift; sourceTree = "<group>"; };
+		9F951987273D41F50071D2E5 /* SetRoutineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRoutineViewModel.swift; sourceTree = "<group>"; };
+		9F95198A273D45F00071D2E5 /* SetTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeView.swift; sourceTree = "<group>"; };
+		9F95198C273D45FB0071D2E5 /* SetTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeViewController.swift; sourceTree = "<group>"; };
+		9F95198E273D46050071D2E5 /* SetTimeVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeVIewModel.swift; sourceTree = "<group>"; };
 		9FA7C4B0273B4B26009B62E3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		9FA7C4B2273B4B2F009B62E3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9FA7C4B4273B4B39009B62E3 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
@@ -117,13 +129,43 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		9FA7C4AF273B4B17009B62E3 /* Onboarding */ = {
+		9F951981273D41B10071D2E5 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
 				9FA7C4B0273B4B26009B62E3 /* OnboardingViewController.swift */,
 				9FA7C4B2273B4B2F009B62E3 /* OnboardingView.swift */,
 				9FA7C4B4273B4B39009B62E3 /* OnboardingViewModel.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		9F951982273D41CD0071D2E5 /* SetRoutine */ = {
+			isa = PBXGroup;
+			children = (
+				9F951983273D41E10071D2E5 /* SetRoutineView.swift */,
+				9F951985273D41EB0071D2E5 /* SetRoutineViewController.swift */,
+				9F951987273D41F50071D2E5 /* SetRoutineViewModel.swift */,
+			);
+			path = SetRoutine;
+			sourceTree = "<group>";
+		};
+		9F951989273D45DB0071D2E5 /* SetTime */ = {
+			isa = PBXGroup;
+			children = (
+				9F95198A273D45F00071D2E5 /* SetTimeView.swift */,
+				9F95198C273D45FB0071D2E5 /* SetTimeViewController.swift */,
+				9F95198E273D46050071D2E5 /* SetTimeVIewModel.swift */,
+			);
+			path = SetTime;
+			sourceTree = "<group>";
+		};
+		9FA7C4AF273B4B17009B62E3 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
 				9FA7C4B6273B4BFB009B62E3 /* OnboardingCoordinator.swift */,
+				9F951989273D45DB0071D2E5 /* SetTime */,
+				9F951981273D41B10071D2E5 /* Intro */,
+				9F951982273D41CD0071D2E5 /* SetRoutine */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -198,15 +240,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F95198D273D45FB0071D2E5 /* SetTimeViewController.swift in Sources */,
 				9F0471502739F88B0099A5E5 /* ViewController.swift in Sources */,
 				9F04714C2739F88B0099A5E5 /* AppDelegate.swift in Sources */,
+				9F951988273D41F50071D2E5 /* SetRoutineViewModel.swift in Sources */,
 				9F04716B273A08910099A5E5 /* MainCoordinator.swift in Sources */,
 				9FA7C4B3273B4B2F009B62E3 /* OnboardingView.swift in Sources */,
+				9F951984273D41E10071D2E5 /* SetRoutineView.swift in Sources */,
+				9F95198F273D46050071D2E5 /* SetTimeVIewModel.swift in Sources */,
 				9FA7C4B1273B4B26009B62E3 /* OnboardingViewController.swift in Sources */,
 				9FA7C4B5273B4B39009B62E3 /* OnboardingViewModel.swift in Sources */,
+				9F95198B273D45F00071D2E5 /* SetTimeView.swift in Sources */,
 				9F04714E2739F88B0099A5E5 /* SceneDelegate.swift in Sources */,
 				9F0471662739F9320099A5E5 /* CodeView.swift in Sources */,
 				9FA7C4B7273B4BFB009B62E3 /* OnboardingCoordinator.swift in Sources */,
+				9F951986273D41EB0071D2E5 /* SetRoutineViewController.swift in Sources */,
 				9F0471562739F88B0099A5E5 /* Liste.xcdatamodeld in Sources */,
 				9F04716D273A08F80099A5E5 /* Coordinator.swift in Sources */,
 			);
@@ -349,6 +397,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KBDYNQ5FQB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Liste/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -375,6 +424,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KBDYNQ5FQB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Liste/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
