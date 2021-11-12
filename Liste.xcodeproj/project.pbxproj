@@ -28,6 +28,7 @@
 		9FA7C4B5273B4B39009B62E3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7C4B4273B4B39009B62E3 /* OnboardingViewModel.swift */; };
 		9FA7C4B7273B4BFB009B62E3 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7C4B6273B4BFB009B62E3 /* OnboardingCoordinator.swift */; };
 		FE169B70273D70E200A8C7C1 /* RoutineCellComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE169B6F273D70E200A8C7C1 /* RoutineCellComponent.swift */; };
+		FEB3CF41273EE4D70028EAD1 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3CF40273EE4D70028EAD1 /* Routine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		9FA7C4B4273B4B39009B62E3 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		9FA7C4B6273B4BFB009B62E3 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		FE169B6F273D70E200A8C7C1 /* RoutineCellComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCellComponent.swift; sourceTree = "<group>"; };
+		FEB3CF40273EE4D70028EAD1 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				9F0471542739F88B0099A5E5 /* Liste.xcdatamodeld */,
+				FEB3CF40273EE4D70028EAD1 /* Routine.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				9F951992273D5AEA0071D2E5 /* ButtonComponent.swift in Sources */,
 				9F95198F273D46050071D2E5 /* SetTimeVIewModel.swift in Sources */,
 				9FA7C4B1273B4B26009B62E3 /* OnboardingViewController.swift in Sources */,
+				FEB3CF41273EE4D70028EAD1 /* Routine.swift in Sources */,
 				9FA7C4B5273B4B39009B62E3 /* OnboardingViewModel.swift in Sources */,
 				9F95198B273D45F00071D2E5 /* SetTimeView.swift in Sources */,
 				9F04714E2739F88B0099A5E5 /* SceneDelegate.swift in Sources */,

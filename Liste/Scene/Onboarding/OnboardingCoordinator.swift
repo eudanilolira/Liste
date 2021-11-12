@@ -51,6 +51,7 @@ class OnboardingCoordinator: Coordinator {
             let vc = SetRoutineViewController(viewModel: .init(coordinator: self))
             navigationController.pushViewController(vc, animated: true)
             
+            
         case .setSleepTime:  //TODO: Set views properties
             let vc = SetTimeViewController(viewModel: .init(coordinator: self))
             navigationController.pushViewController(vc, animated: true)

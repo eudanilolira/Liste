@@ -45,7 +45,6 @@ class SetRoutineViewController: UIViewController  {
         mainView.tableView.dataSource = self
         mainView.tableView.delegate = self
         mainView.tableView.register(RoutineCellComponent.self, forCellReuseIdentifier: "cellId")
-        
     }
 }
 
@@ -60,5 +59,38 @@ extension SetRoutineViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       }
+        let cell = tableView.cellForRow(at: indexPath) as! RoutineCellComponent
+        cell.buttonView.backgroundColor = .orange
+        switch indexPath.row {
+        case 0:
+            routine.selectedWork.toggle()
+        case 1:
+            routine.selecteStudy.toggle()
+        case 2:
+            routine.selectedSports.toggle()
+        case 3:
+            routine.selectedFun.toggle()
+        default:
+            print("")
+        }
+       
+        
+    }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! RoutineCellComponent
+        cell.buttonView.backgroundColor = .clear
+        switch indexPath.row {
+        case 0:
+            routine.selectedWork.toggle()
+        case 1:
+            routine.selecteStudy.toggle()
+        case 2:
+            routine.selectedSports.toggle()
+        case 3:
+            routine.selectedFun.toggle()
+        default:
+           print("")
+        }
+    }
+    
 }

@@ -14,6 +14,7 @@ class SetRoutineViewModel {
     
     init(coordinator: OnboardingCoordinator) {
         self.coordinator = coordinator
+        
     }
     
     func showNextPage() {

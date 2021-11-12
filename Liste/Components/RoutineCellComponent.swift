@@ -25,8 +25,11 @@ class RoutineCellComponent: UITableViewCell, CodeView {
     
     let buttonView: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .orange
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .clear
         button.layer.cornerRadius = 10
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.orange.cgColor
         return button
     }()
     

@@ -61,6 +61,7 @@ class SetRoutineView: UIView, CodeView {
         tableView.separatorStyle = .none
         tableView.isScrollEnabled = false
         tableView.rowHeight = 90
+        tableView.allowsMultipleSelection = true
         
         self.backgroundColor = .white
         
@@ -70,7 +71,6 @@ class SetRoutineView: UIView, CodeView {
         subtitleView.text = "No meu dia a dia, eu tenho/desejo ter tempo para:"
         subtitleView.font = .systemFont(ofSize: 24)
         subtitleView.numberOfLines = 0
-        
         
     }
    
