@@ -49,8 +49,8 @@ class SetTimeView: UIView, CodeView {
 
         let constraints = [
             stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 115),
-            stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            stackView.widthAnchor.constraint(equalTo: self.widthAnchor),
+            stackView.rightAnchor.constraint(equalTo: self.rightAnchor),
+            stackView.leftAnchor.constraint(equalTo: self.leftAnchor),
         ]
 
         NSLayoutConstraint.activate(constraints)
