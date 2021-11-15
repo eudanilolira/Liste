@@ -27,6 +27,8 @@
 		9FA7C4B3273B4B2F009B62E3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7C4B2273B4B2F009B62E3 /* OnboardingView.swift */; };
 		9FA7C4B5273B4B39009B62E3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7C4B4273B4B39009B62E3 /* OnboardingViewModel.swift */; };
 		9FA7C4B7273B4BFB009B62E3 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7C4B6273B4BFB009B62E3 /* OnboardingCoordinator.swift */; };
+		FE169B70273D70E200A8C7C1 /* RoutineCellComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE169B6F273D70E200A8C7C1 /* RoutineCellComponent.swift */; };
+		FEB3CF41273EE4D70028EAD1 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3CF40273EE4D70028EAD1 /* Routine.swift */; };
 		FEB3CF44273F09970028EAD1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3CF43273F09970028EAD1 /* ColorExtension.swift */; };
 		FEB3CF53273F113C0028EAD1 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEB3CF52273F113C0028EAD1 /* DMSans-Medium.ttf */; };
 		FEB3CF55273F11F90028EAD1 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEB3CF54273F11F90028EAD1 /* DMSans-Regular.ttf */; };
@@ -57,6 +59,8 @@
 		9FA7C4B2273B4B2F009B62E3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9FA7C4B4273B4B39009B62E3 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		9FA7C4B6273B4BFB009B62E3 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		FE169B6F273D70E200A8C7C1 /* RoutineCellComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCellComponent.swift; sourceTree = "<group>"; };
+		FEB3CF40273EE4D70028EAD1 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		FEB3CF43273F09970028EAD1 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		FEB3CF52273F113C0028EAD1 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
 		FEB3CF54273F11F90028EAD1 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				9F0471542739F88B0099A5E5 /* Liste.xcdatamodeld */,
+				FEB3CF40273EE4D70028EAD1 /* Routine.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				9F951991273D5AEA0071D2E5 /* ButtonComponent.swift */,
+				FE169B6F273D70E200A8C7C1 /* RoutineCellComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 				9F951992273D5AEA0071D2E5 /* ButtonComponent.swift in Sources */,
 				9F95198F273D46050071D2E5 /* SetTimeVIewModel.swift in Sources */,
 				9FA7C4B1273B4B26009B62E3 /* OnboardingViewController.swift in Sources */,
+				FEB3CF41273EE4D70028EAD1 /* Routine.swift in Sources */,
 				9FA7C4B5273B4B39009B62E3 /* OnboardingViewModel.swift in Sources */,
 				9F95198B273D45F00071D2E5 /* SetTimeView.swift in Sources */,
 				FEB3CF59273F13660028EAD1 /* Font.swift in Sources */,
@@ -296,6 +303,7 @@
 				9F951986273D41EB0071D2E5 /* SetRoutineViewController.swift in Sources */,
 				9F0471562739F88B0099A5E5 /* Liste.xcdatamodeld in Sources */,
 				9F04716D273A08F80099A5E5 /* Coordinator.swift in Sources */,
+				FE169B70273D70E200A8C7C1 /* RoutineCellComponent.swift in Sources */,
 				FEB3CF44273F09970028EAD1 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

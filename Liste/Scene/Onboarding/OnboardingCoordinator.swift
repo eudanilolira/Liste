@@ -14,6 +14,7 @@ class OnboardingCoordinator: Coordinator {
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     var type: CoordinatorType = .onboarding
+    var routine: Routine?
         
     required init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -51,7 +52,8 @@ class OnboardingCoordinator: Coordinator {
             let vc = SetRoutineViewController(viewModel: .init(coordinator: self))
             navigationController.pushViewController(vc, animated: true)
             
-        case .setSleepTime:  //TODO: Set views properties
+            
+        case .setSleepTime(let activities):  //TODO: Set views properties
             let vc = SetTimeViewController(viewModel: .init(coordinator: self))
             navigationController.pushViewController(vc, animated: true)
             
@@ -104,7 +106,7 @@ extension OnboardingCoordinator {
         case knowYourPriorities
         case rememberToDeliver
         case setRoutine
-        case setSleepTime
+        case setSleepTime(activities: Routine)
         case setStudyTime
         case setFunTime
         case setSportsTime
