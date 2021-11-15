@@ -24,9 +24,9 @@ class SetTimeViewController: UIViewController, MSCircularSliderDelegate, MSCircu
     }
     
     //MARK: Initalizers
-    init(viewModel: SetTimeViewModel) {
+    init(viewModel: SetTimeViewModel, category: String) {
         self.viewModel = viewModel
-        self.mainView = SetTimeView()
+        self.mainView = SetTimeView(category: category)
         super.init(nibName: nil, bundle: nil)
         
         self.mainView.slider.delegate = self
@@ -38,6 +38,11 @@ class SetTimeViewController: UIViewController, MSCircularSliderDelegate, MSCircu
     }
     
     func setupActions() {
+        mainView.nextButtonView.addTarget(self, action: #selector(showNextPage), for: .touchUpInside)
+    }
+    
+    @objc func showNextPage() {
+        viewModel.showNextPage()
     }
     
     func circularSlider(_ slider: MSCircularSlider, valueChangedTo value: Double, fromUser: Bool) {

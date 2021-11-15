@@ -28,7 +28,8 @@ class SetTimeView: UIView, CodeView {
         return stack
     }()
     
-    init() {
+    init(category: String) {
+        categoryLabel.text = category
         super.init(frame: .zero)
         self.setupView()
     }
@@ -71,7 +72,6 @@ class SetTimeView: UIView, CodeView {
     }
     
     func setupAdditionalConfiguration() {
-        categoryLabel.text = "Dormir"
         titleLabel.text = "Conte sobre seu dia a dia"
         subtitleLabel.text = "Quanto tempo dedicará para:"
         

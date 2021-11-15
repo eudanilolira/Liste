@@ -40,6 +40,8 @@ class OnboardingViewController: UIViewController {
     }
     
     func setupActions() {
+        mainView.buttonView.addTarget(self, action: #selector(swipeRight), for: .touchUpInside)
+        
         let swipeGestureRecognizerRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeRight))
 
         swipeGestureRecognizerRight.direction = .left

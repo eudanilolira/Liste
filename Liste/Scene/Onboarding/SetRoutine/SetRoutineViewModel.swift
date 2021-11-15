@@ -8,15 +8,20 @@
 import Foundation
 
 class SetRoutineViewModel {
+    var routine = Routine()
+    
     typealias Route = OnboardingCoordinator.Route
 
     weak var coordinator: OnboardingCoordinator?
     
     init(coordinator: OnboardingCoordinator) {
         self.coordinator = coordinator
+        
     }
     
     func showNextPage() {
-        coordinator?.navigate(to: .welcome)
+        coordinator?.routine = routine
+        coordinator?.navigate(to: .setSleepTime)
     }
+    
 }
