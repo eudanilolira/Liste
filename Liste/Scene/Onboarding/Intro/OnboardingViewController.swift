@@ -15,7 +15,6 @@ class OnboardingViewController: UIViewController {
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override func loadView() {
