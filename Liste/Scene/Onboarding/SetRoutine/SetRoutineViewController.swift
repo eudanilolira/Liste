@@ -39,6 +39,11 @@ class SetRoutineViewController: UIViewController  {
     }
     
     func setupActions() {
+        mainView.buttonView.addTarget(self, action: #selector(showNextPage), for: .touchUpInside)
+    }
+    
+    @objc func showNextPage() {
+        viewModel.showNextPage()
     }
     
     func setupTableViewDelegate(){
@@ -58,39 +63,37 @@ extension SetRoutineViewController: UITableViewDelegate, UITableViewDataSource {
         cell.title = cellTitle[indexPath.row]
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! RoutineCellComponent
         cell.buttonView.backgroundColor = .orange
-        switch indexPath.row {
-        case 0:
-            routine.selectedWork.toggle()
-        case 1:
-            routine.selecteStudy.toggle()
-        case 2:
-            routine.selectedSports.toggle()
-        case 3:
-            routine.selectedFun.toggle()
-        default:
-            print("")
-        }
-       
-        
+        selectActivity(index: indexPath.row)
     }
+    
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! RoutineCellComponent
         cell.buttonView.backgroundColor = .clear
-        switch indexPath.row {
-        case 0:
-            routine.selectedWork.toggle()
-        case 1:
-            routine.selecteStudy.toggle()
-        case 2:
-            routine.selectedSports.toggle()
-        case 3:
-            routine.selectedFun.toggle()
-        default:
-           print("")
-        }
+        selectActivity(index: indexPath.row)
+       
     }
     
+    func selectActivity (index: Int) {
+        switch index {
+        case 0:
+            viewModel.routine.selectedWork.toggle()
+        case 1:
+            viewModel.routine.selectedStudy.toggle()
+        case 2:
+            viewModel.routine.selectedSports.toggle()
+        case 3:
+            viewModel.routine.selectedFun.toggle()
+        default:
+            print("")
+        }
+        if viewModel.routine.selectedWork || viewModel.routine.selectedStudy || viewModel.routine.selectedFun || viewModel.routine.selectedSports {
+            mainView.buttonView.enable()
+        } else {
+            mainView.buttonView.disable()
+        }
+    }
 }

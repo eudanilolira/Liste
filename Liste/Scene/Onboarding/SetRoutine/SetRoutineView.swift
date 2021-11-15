@@ -72,6 +72,9 @@ class SetRoutineView: UIView, CodeView {
         subtitleView.font = .systemFont(ofSize: 24)
         subtitleView.numberOfLines = 0
         
+        
+        buttonView.disable()
+        
     }
    
 }

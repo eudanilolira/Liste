@@ -6,12 +6,10 @@
 //
 
 import UIKit
+
 struct  Routine {
     var selectedWork: Bool = false
-    var selecteStudy: Bool = false
+    var selectedStudy: Bool = false
     var selectedSports: Bool = false
     var selectedFun: Bool = false
     }
-    
-
-var routine = Routine()
