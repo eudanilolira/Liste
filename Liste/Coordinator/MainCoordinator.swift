@@ -39,8 +39,10 @@ class MainCoordinator: Coordinator {
             childCoordinators.append(onboardingCoordinator)
 
         case .tab:
-            //TODO: Implement
-            print("Not implemented")
+            let appCoordinator = AppCoordinator(navigationController)
+            appCoordinator.finishDelegate = self
+            appCoordinator.start()
+            childCoordinators.append(appCoordinator)
         }
     }
 }
@@ -48,5 +50,16 @@ class MainCoordinator: Coordinator {
 extension MainCoordinator: CoordinatorFinishDelegate {
     func coordinatorDidFinish(childCoordinator: Coordinator) {
         childCoordinators = childCoordinators.filter({ $0.type != childCoordinator.type })
+        
+        switch childCoordinator.type {
+        case .tab:
+            navigationController.viewControllers.removeAll()
+            navigate(to: .onboarding)
+        case .onboarding:
+            navigationController.viewControllers.removeAll()
+            navigate(to: .tab)
+        default:
+            break
+        }
     }
 }
