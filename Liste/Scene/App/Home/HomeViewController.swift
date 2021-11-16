@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableViewDelegate()
     }
     
     override func loadView() {
@@ -39,6 +40,12 @@ class HomeViewController: UIViewController {
     func setupActions() {
     }
     
+    func setupTableViewDelegate(){
+        mainView.tableView.dataSource = self
+        mainView.tableView.delegate = self
+        mainView.tableView.register(TaskCellComponent.self, forCellReuseIdentifier: "taskCell")
+    }
+    
 }
 
 extension HomeViewController {
@@ -46,3 +53,36 @@ extension HomeViewController {
         case home
     }
 }
+
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+   
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.text = "Priorities"
+        
+        
+        return label
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TaskCellComponent
+        return cell
+    }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let cell = tableView.cellForRow(at: indexPath) as! RoutineCellComponent
+//        cell.buttonView.backgroundColor = .orange
+//        selectActivity(index: indexPath.row)
+//    }
+//
+//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+//        let cell = tableView.cellForRow(at: indexPath) as! RoutineCellComponent
+//        cell.buttonView.backgroundColor = .clear
+//        selectActivity(index: indexPath.row)
+        
+    }

@@ -27,7 +27,7 @@ class MainCoordinator: Coordinator {
 
     func start() {
         //TODO: Verificar se o usuário já viu o onboarding
-        self.navigate(to: .onboarding)
+        self.navigate(to: .tab) //TODO: Lembrar de mudar isso para .onboarding
     }
         
     func navigate(to route: Route) {
