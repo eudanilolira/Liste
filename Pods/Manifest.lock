@@ -1,0 +1,16 @@
+PODS:
+  - MSCircularSlider (1.3.2)
+
+DEPENDENCIES:
+  - MSCircularSlider
+
+SPEC REPOS:
+  trunk:
+    - MSCircularSlider
+
+SPEC CHECKSUMS:
+  MSCircularSlider: 07fe922e6a7e05fb67e876d449e365327fdad3d1
+
+PODFILE CHECKSUM: 483c6a6b25e3f3c8b8d0e4b28141810f47b6aa72
+
+COCOAPODS: 1.11.2

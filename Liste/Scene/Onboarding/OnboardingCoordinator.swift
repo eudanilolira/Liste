@@ -52,21 +52,29 @@ class OnboardingCoordinator: Coordinator {
             let vc = SetRoutineViewController(viewModel: .init(coordinator: self))
             navigationController.pushViewController(vc, animated: true)
             
-            
-        case .setSleepTime(let activities):  //TODO: Set views properties
-            let vc = SetTimeViewController(viewModel: .init(coordinator: self))
+        case .setSleepTime:
+            let vc = SetTimeViewController(
+                viewModel: .init(coordinator: self), category: "Dormir")
+            navigationController.pushViewController(vc, animated: true)
+        
+        case .setFunTime:
+            let vc = SetTimeViewController(
+                viewModel: .init(coordinator: self), category: "Diversão")
             navigationController.pushViewController(vc, animated: true)
             
-        case .setFunTime:  //TODO: Set views properties
-            let vc = SetTimeViewController(viewModel: .init(coordinator: self))
+        case .setSportsTime:
+            let vc = SetTimeViewController(
+                viewModel: .init(coordinator: self), category: "Exercício")
+            navigationController.pushViewController(vc, animated: true)
+        
+        case .setWorkTime:
+            let vc = SetTimeViewController(
+                viewModel: .init(coordinator: self), category: "Trabalho")
             navigationController.pushViewController(vc, animated: true)
             
-        case .setSportsTime:  //TODO: Set views properties
-            let vc = SetTimeViewController(viewModel: .init(coordinator: self))
-            navigationController.pushViewController(vc, animated: true)
-            
-        case .setStudyTime: //TODO: Set views properties
-            let vc = SetTimeViewController(viewModel: .init(coordinator: self))
+        case .setStudyTime:
+            let vc = SetTimeViewController(
+                viewModel: .init(coordinator: self), category: "Estudos")
             navigationController.pushViewController(vc, animated: true)
 
         case .allReady:
@@ -106,7 +114,8 @@ extension OnboardingCoordinator {
         case knowYourPriorities
         case rememberToDeliver
         case setRoutine
-        case setSleepTime(activities: Routine)
+        case setSleepTime
+        case setWorkTime
         case setStudyTime
         case setFunTime
         case setSportsTime

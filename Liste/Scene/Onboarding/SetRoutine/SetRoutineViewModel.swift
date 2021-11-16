@@ -20,7 +20,8 @@ class SetRoutineViewModel {
     }
     
     func showNextPage() {
-        coordinator?.navigate(to: .setSleepTime(activities: routine))
+        coordinator?.routine = routine
+        coordinator?.navigate(to: .setSleepTime)
     }
     
 }

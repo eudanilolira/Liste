@@ -17,6 +17,19 @@ class SetTimeViewModel {
     }
     
     func showNextPage() {
-        coordinator?.navigate(to: .allReady)
+        let nextPage = coordinator?.routine?.nextRoutine()
+        
+        switch nextPage {
+        case .work:
+            coordinator?.navigate(to: .setWorkTime)
+        case .study:
+            coordinator?.navigate(to: .setStudyTime)
+        case .sports:
+            coordinator?.navigate(to: .setSportsTime)
+        case .fun:
+            coordinator?.navigate(to: .setFunTime)
+        default:
+            coordinator?.navigate(to: .allReady)
+        }
     }
 }
