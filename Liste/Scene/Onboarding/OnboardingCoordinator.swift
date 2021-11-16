@@ -82,7 +82,9 @@ class OnboardingCoordinator: Coordinator {
                 title: "Estamos prontos!",
                 subtitle: "Agora é só adicionar suas tasks e organizar sua rotina!",
                 image: UIImage(named: "fourthOnboarding"),
-                nextPage: .welcome) //TODO: Modificar página para sair do onboarding
+                nextPage: .dismiss,
+                showButton: true
+            )
         
         case .dismiss:
             self.finish()
