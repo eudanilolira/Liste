@@ -23,10 +23,15 @@
 		9F95198D273D45FB0071D2E5 /* SetTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95198C273D45FB0071D2E5 /* SetTimeViewController.swift */; };
 		9F95198F273D46050071D2E5 /* SetTimeVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95198E273D46050071D2E5 /* SetTimeVIewModel.swift */; };
 		9F951992273D5AEA0071D2E5 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F951991273D5AEA0071D2E5 /* ButtonComponent.swift */; };
+		9F9993542743E82A00F12DFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9993532743E82A00F12DFF /* HomeViewController.swift */; };
+		9F9993562743E83D00F12DFF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9993552743E83D00F12DFF /* ProfileViewController.swift */; };
+		9F9993582743E85300F12DFF /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9993572743E85300F12DFF /* NewTaskViewController.swift */; };
+		9F99935A2743E98300F12DFF /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9993592743E98300F12DFF /* Tabs.swift */; };
 		9FA7C4B1273B4B26009B62E3 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7C4B0273B4B26009B62E3 /* OnboardingViewController.swift */; };
 		9FA7C4B3273B4B2F009B62E3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7C4B2273B4B2F009B62E3 /* OnboardingView.swift */; };
 		9FA7C4B5273B4B39009B62E3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7C4B4273B4B39009B62E3 /* OnboardingViewModel.swift */; };
 		9FA7C4B7273B4BFB009B62E3 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7C4B6273B4BFB009B62E3 /* OnboardingCoordinator.swift */; };
+		9FC2EC272743240800F33991 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC2EC262743240800F33991 /* AppCoordinator.swift */; };
 		FE169B70273D70E200A8C7C1 /* RoutineCellComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE169B6F273D70E200A8C7C1 /* RoutineCellComponent.swift */; };
 		FEB3CF41273EE4D70028EAD1 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3CF40273EE4D70028EAD1 /* Routine.swift */; };
 		FEB3CF44273F09970028EAD1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3CF43273F09970028EAD1 /* ColorExtension.swift */; };
@@ -55,10 +60,15 @@
 		9F95198C273D45FB0071D2E5 /* SetTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeViewController.swift; sourceTree = "<group>"; };
 		9F95198E273D46050071D2E5 /* SetTimeVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeVIewModel.swift; sourceTree = "<group>"; };
 		9F951991273D5AEA0071D2E5 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
+		9F9993532743E82A00F12DFF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9F9993552743E83D00F12DFF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9F9993572743E85300F12DFF /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
+		9F9993592743E98300F12DFF /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		9FA7C4B0273B4B26009B62E3 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		9FA7C4B2273B4B2F009B62E3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9FA7C4B4273B4B39009B62E3 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		9FA7C4B6273B4BFB009B62E3 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		9FC2EC262743240800F33991 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FE169B6F273D70E200A8C7C1 /* RoutineCellComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCellComponent.swift; sourceTree = "<group>"; };
 		FEB3CF40273EE4D70028EAD1 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		FEB3CF43273F09970028EAD1 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
@@ -138,6 +148,7 @@
 		9F0471682739FB8C0099A5E5 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				9FC2EC25274323E500F33991 /* App */,
 				9FA7C4AF273B4B17009B62E3 /* Onboarding */,
 			);
 			path = Scene;
@@ -190,6 +201,30 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		9F9993502743E80C00F12DFF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9F9993532743E82A00F12DFF /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9F9993512743E81200F12DFF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9F9993552743E83D00F12DFF /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		9F9993522743E81800F12DFF /* NewTask */ = {
+			isa = PBXGroup;
+			children = (
+				9F9993572743E85300F12DFF /* NewTaskViewController.swift */,
+			);
+			path = NewTask;
+			sourceTree = "<group>";
+		};
 		9FA7C4AF273B4B17009B62E3 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,11 +236,23 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		9FC2EC25274323E500F33991 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9FC2EC262743240800F33991 /* AppCoordinator.swift */,
+				9F9993522743E81800F12DFF /* NewTask */,
+				9F9993512743E81200F12DFF /* Profile */,
+				9F9993502743E80C00F12DFF /* Home */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		FEB3CF42273F09880028EAD1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				FEB3CF43273F09970028EAD1 /* ColorExtension.swift */,
 				FEB3CF58273F13660028EAD1 /* Font.swift */,
+				9F9993592743E98300F12DFF /* Tabs.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,10 +336,13 @@
 				9F951988273D41F50071D2E5 /* SetRoutineViewModel.swift in Sources */,
 				9F04716B273A08910099A5E5 /* MainCoordinator.swift in Sources */,
 				9FA7C4B3273B4B2F009B62E3 /* OnboardingView.swift in Sources */,
+				9F9993582743E85300F12DFF /* NewTaskViewController.swift in Sources */,
+				9FC2EC272743240800F33991 /* AppCoordinator.swift in Sources */,
 				9F951984273D41E10071D2E5 /* SetRoutineView.swift in Sources */,
 				9F951992273D5AEA0071D2E5 /* ButtonComponent.swift in Sources */,
 				9F95198F273D46050071D2E5 /* SetTimeVIewModel.swift in Sources */,
 				9FA7C4B1273B4B26009B62E3 /* OnboardingViewController.swift in Sources */,
+				9F9993542743E82A00F12DFF /* HomeViewController.swift in Sources */,
 				FEB3CF41273EE4D70028EAD1 /* Routine.swift in Sources */,
 				9FA7C4B5273B4B39009B62E3 /* OnboardingViewModel.swift in Sources */,
 				9F95198B273D45F00071D2E5 /* SetTimeView.swift in Sources */,
@@ -303,6 +353,8 @@
 				9F951986273D41EB0071D2E5 /* SetRoutineViewController.swift in Sources */,
 				9F0471562739F88B0099A5E5 /* Liste.xcdatamodeld in Sources */,
 				9F04716D273A08F80099A5E5 /* Coordinator.swift in Sources */,
+				9F99935A2743E98300F12DFF /* Tabs.swift in Sources */,
+				9F9993562743E83D00F12DFF /* ProfileViewController.swift in Sources */,
 				FE169B70273D70E200A8C7C1 /* RoutineCellComponent.swift in Sources */,
 				FEB3CF44273F09970028EAD1 /* ColorExtension.swift in Sources */,
 			);

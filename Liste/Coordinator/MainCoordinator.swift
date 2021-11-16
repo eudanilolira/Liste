@@ -39,8 +39,10 @@ class MainCoordinator: Coordinator {
             childCoordinators.append(onboardingCoordinator)
 
         case .tab:
-            //TODO: Implement
-            print("Not implemented")
+            let appCoordinator = AppCoordinator(navigationController)
+            appCoordinator.finishDelegate = self
+            appCoordinator.start()
+            childCoordinators.append(appCoordinator)
         }
     }
 }

@@ -52,7 +52,6 @@ class OnboardingCoordinator: Coordinator {
             let vc = SetRoutineViewController(viewModel: .init(coordinator: self))
             navigationController.pushViewController(vc, animated: true)
             
-            
         case .setSleepTime(let activities):  //TODO: Set views properties
             let vc = SetTimeViewController(viewModel: .init(coordinator: self))
             navigationController.pushViewController(vc, animated: true)
@@ -74,7 +73,9 @@ class OnboardingCoordinator: Coordinator {
                 title: "Estamos prontos!",
                 subtitle: "Agora é só adicionar suas tasks e organizar sua rotina!",
                 image: UIImage(named: "fourthOnboarding"),
-                nextPage: .welcome) //TODO: Modificar página para sair do onboarding
+                nextPage: .dismiss,
+                showButton: true
+            )
         
         case .dismiss:
             self.finish()
