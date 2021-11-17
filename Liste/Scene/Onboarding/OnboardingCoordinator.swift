@@ -31,14 +31,16 @@ class OnboardingCoordinator: Coordinator {
                 title: "Bem vindo",
                 subtitle: "Liste é um app para anotar suas tarefas de forma a respeitar sua rotina e suas necessidades",
                 image: UIImage(named: "firstOnboarding"),
-                nextPage: .knowYourPriorities
+                nextPage: .knowYourPriorities,
+                pageNumber: 0
             )
         case .knowYourPriorities:
             createOnboardingIntroVC(
                 title: "Saiba suas prioridades",
                 subtitle: "O app avalia quais as tarefas devem ser feitas antes para se evitar a correria e ansiedade.",
                 image: UIImage(named: "secondOnboarding"),
-                nextPage: .rememberToDeliver
+                nextPage: .rememberToDeliver,
+                pageNumber: 1
             )
         case .rememberToDeliver:
             createOnboardingIntroVC(
@@ -46,6 +48,7 @@ class OnboardingCoordinator: Coordinator {
                 subtitle: "Cada task possui a possibilidade de ser entregável. Assim, você será lembrado com antecedência e evitará atrasos.",
                 image: UIImage(named: "thirdOnboarding"),
                 nextPage: .setRoutine,
+                pageNumber: 2,
                 showButton: true
             )
         case .setRoutine:
@@ -97,7 +100,7 @@ extension OnboardingCoordinator {
     func createOnboardingIntroVC(title: String,
                                  subtitle: String,
                                  image: UIImage?,
-                                 nextPage: Route,
+                                 nextPage: Route, pageNumber: Int? = nil,
                                  showButton: Bool = false) {
 
         let onboardingVC = OnboardingViewController(
@@ -105,6 +108,7 @@ extension OnboardingCoordinator {
             title: title,
             subtitle: subtitle,
             image: image,
+            pageNumber: pageNumber,
             showButton: showButton
         )
 
