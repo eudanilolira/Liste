@@ -30,13 +30,14 @@ class HomeView: UIView, CodeView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         let constraints = [
+            
             userView.topAnchor.constraint(equalTo: self.topAnchor, constant: 63),
             userView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 29),
             
             
-            tableView.topAnchor.constraint(equalTo: userView.bottomAnchor, constant: 24),
+            tableView.topAnchor.constraint(equalTo: userView.bottomAnchor, constant: 52),
             tableView.leftAnchor.constraint(equalTo: self.leftAnchor),
-            tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -100),
             tableView.rightAnchor.constraint(equalTo: self.rightAnchor),
         ]
         
@@ -52,9 +53,8 @@ class HomeView: UIView, CodeView {
         
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
-        tableView.isScrollEnabled = false
-        tableView.rowHeight = 160
-        tableView.allowsMultipleSelection = true
+        tableView.isScrollEnabled = true
+        tableView.allowsSelection = true
         
     }
 }

@@ -46,7 +46,9 @@
 		FEB3CF55273F11F90028EAD1 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEB3CF54273F11F90028EAD1 /* DMSans-Regular.ttf */; };
 		FEB3CF57273F125A0028EAD1 /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEB3CF56273F125A0028EAD1 /* DMSans-Bold.ttf */; };
 		FEB3CF59273F13660028EAD1 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3CF58273F13660028EAD1 /* Font.swift */; };
-		FEEC923227443890008266DF /* TaskCellComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEC923127443890008266DF /* TaskCellComponent.swift */; };
+		FEE3007E2745976500AE1A99 /* TodayCellComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE3007D2745976500AE1A99 /* TodayCellComponent.swift */; };
+		FEEC923227443890008266DF /* PriorityCellComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEC923127443890008266DF /* PriorityCellComponent.swift */; };
+		FEEC923627456DDD008266DF /* TagComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEC923527456DDD008266DF /* TagComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,7 +95,9 @@
 		FEB3CF54273F11F90028EAD1 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		FEB3CF56273F125A0028EAD1 /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
 		FEB3CF58273F13660028EAD1 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		FEEC923127443890008266DF /* TaskCellComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellComponent.swift; sourceTree = "<group>"; };
+		FEE3007D2745976500AE1A99 /* TodayCellComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCellComponent.swift; sourceTree = "<group>"; };
+		FEEC923127443890008266DF /* PriorityCellComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityCellComponent.swift; sourceTree = "<group>"; };
+		FEEC923527456DDD008266DF /* TagComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,7 +237,9 @@
 			children = (
 				9F951991273D5AEA0071D2E5 /* ButtonComponent.swift */,
 				FE169B6F273D70E200A8C7C1 /* RoutineCellComponent.swift */,
-				FEEC923127443890008266DF /* TaskCellComponent.swift */,
+				FEEC923127443890008266DF /* PriorityCellComponent.swift */,
+				FEEC923527456DDD008266DF /* TagComponent.swift */,
+				FEE3007D2745976500AE1A99 /* TodayCellComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -435,13 +441,14 @@
 				9F951988273D41F50071D2E5 /* SetRoutineViewModel.swift in Sources */,
 				9F04716B273A08910099A5E5 /* MainCoordinator.swift in Sources */,
 				9FA7C4B3273B4B2F009B62E3 /* OnboardingView.swift in Sources */,
-				FEEC923227443890008266DF /* TaskCellComponent.swift in Sources */,
+				FEEC923227443890008266DF /* PriorityCellComponent.swift in Sources */,
 				9F9993582743E85300F12DFF /* NewTaskViewController.swift in Sources */,
 				9FC2EC272743240800F33991 /* AppCoordinator.swift in Sources */,
 				9F01154A2744236000CED48B /* NewTaskView.swift in Sources */,
 				9F951984273D41E10071D2E5 /* SetRoutineView.swift in Sources */,
 				9F951992273D5AEA0071D2E5 /* ButtonComponent.swift in Sources */,
 				9F0115502744237F00CED48B /* ProfileViewModel.swift in Sources */,
+				FEE3007E2745976500AE1A99 /* TodayCellComponent.swift in Sources */,
 				9F0115522744238900CED48B /* HomeView.swift in Sources */,
 				9F95198F273D46050071D2E5 /* SetTimeVIewModel.swift in Sources */,
 				9FA7C4B1273B4B26009B62E3 /* OnboardingViewController.swift in Sources */,
@@ -457,6 +464,7 @@
 				9F951986273D41EB0071D2E5 /* SetRoutineViewController.swift in Sources */,
 				9F0471562739F88B0099A5E5 /* Liste.xcdatamodeld in Sources */,
 				9F04716D273A08F80099A5E5 /* Coordinator.swift in Sources */,
+				FEEC923627456DDD008266DF /* TagComponent.swift in Sources */,
 				9F99935A2743E98300F12DFF /* Tabs.swift in Sources */,
 				9F9993562743E83D00F12DFF /* ProfileViewController.swift in Sources */,
 				FE169B70273D70E200A8C7C1 /* RoutineCellComponent.swift in Sources */,
