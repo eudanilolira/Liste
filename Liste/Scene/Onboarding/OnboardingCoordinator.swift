@@ -87,6 +87,7 @@ class OnboardingCoordinator: Coordinator {
             )
         
         case .dismiss:
+            UserDefaults.standard.set(true, forKey: "didFinishOnboarding")
             self.finish()
         }
     }
