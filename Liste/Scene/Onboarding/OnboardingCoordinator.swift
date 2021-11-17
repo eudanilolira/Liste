@@ -54,27 +54,27 @@ class OnboardingCoordinator: Coordinator {
             
         case .setSleepTime:
             let vc = SetTimeViewController(
-                viewModel: .init(coordinator: self), category: "Dormir")
+                viewModel: .init(coordinator: self), category: .sleep)
             navigationController.pushViewController(vc, animated: true)
         
         case .setFunTime:
             let vc = SetTimeViewController(
-                viewModel: .init(coordinator: self), category: "Diversão")
+                viewModel: .init(coordinator: self), category: .fun)
             navigationController.pushViewController(vc, animated: true)
             
         case .setSportsTime:
             let vc = SetTimeViewController(
-                viewModel: .init(coordinator: self), category: "Exercício")
+                viewModel: .init(coordinator: self), category: .sports)
             navigationController.pushViewController(vc, animated: true)
         
         case .setWorkTime:
             let vc = SetTimeViewController(
-                viewModel: .init(coordinator: self), category: "Trabalho")
+                viewModel: .init(coordinator: self), category: .work)
             navigationController.pushViewController(vc, animated: true)
             
         case .setStudyTime:
             let vc = SetTimeViewController(
-                viewModel: .init(coordinator: self), category: "Estudos")
+                viewModel: .init(coordinator: self), category: .study)
             navigationController.pushViewController(vc, animated: true)
 
         case .allReady:
