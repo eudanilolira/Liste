@@ -22,12 +22,13 @@ class OnboardingViewController: UIViewController {
     }
     
     //MARK: Initalizers
-    init(viewModel: OnboardingViewModel, title: String, subtitle: String, image: UIImage?, showButton: Bool) {
+    init(viewModel: OnboardingViewModel, title: String, subtitle: String, image: UIImage?, pageNumber: Int?, showButton: Bool) {
         self.viewModel = viewModel
         self.mainView = OnboardingView(
             subtitle: subtitle,
             title: title,
             image: image,
+            pageNumber: pageNumber,
             showButton: showButton
         )
         super.init(nibName: nil, bundle: nil)

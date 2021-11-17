@@ -11,8 +11,14 @@ class OnboardingView: UIView, CodeView {
     private let imageView: UIImageView = UIImageView()
     private let titleView: UILabel = UILabel()
     private let subtitleView: UILabel = UILabel()
-    let buttonView = ButtonComponent(title: "Definir minha rotina")
     
+    let buttonView = ButtonComponent(title: "Definir minha rotina")
+    let pageControl: UIPageControl = {
+        let pageControl = UIPageControl()
+        pageControl.numberOfPages = 3
+        
+        return pageControl
+    }()
 
     var title: String? {
         get { titleView.text}
@@ -34,8 +40,15 @@ class OnboardingView: UIView, CodeView {
         setupView()
     }
     
-    init(subtitle: String, title: String, image: UIImage?, showButton: Bool) {
+    init(subtitle: String, title: String, image: UIImage?, pageNumber: Int?, showButton: Bool) {
         super.init(frame: .zero)
+
+        if let page = pageNumber {
+            self.pageControl.currentPage = page
+        } else {
+            self.pageControl.isHidden = true
+        }
+
         self.title = title
         self.subtitle = subtitle
         self.image = image ?? UIImage(named: "firstOnboarding")!
@@ -52,12 +65,14 @@ class OnboardingView: UIView, CodeView {
         self.addSubview(titleView)
         self.addSubview(subtitleView)
         self.addSubview(buttonView)
+        self.addSubview(pageControl)
     }
     
     func setupConstraints() {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         titleView.translatesAutoresizingMaskIntoConstraints = false
         subtitleView.translatesAutoresizingMaskIntoConstraints = false
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
         
         let constraints = [
             imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 200),
@@ -71,6 +86,9 @@ class OnboardingView: UIView, CodeView {
             subtitleView.topAnchor.constraint(equalTo: titleView.bottomAnchor, constant: 24),
             subtitleView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             subtitleView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.9),
+            
+            pageControl.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            pageControl.topAnchor.constraint(equalTo: subtitleView.bottomAnchor, constant: 24)
         ]
         
         NSLayoutConstraint.activate(constraints)
@@ -84,6 +102,9 @@ class OnboardingView: UIView, CodeView {
         titleView.numberOfLines = 0
         titleView.font = .boldSystemFont(ofSize: 28)
         
+        pageControl.pageIndicatorTintColor = .gray
+        pageControl.currentPageIndicatorTintColor = .tangerine
+
         imageView.contentMode = .scaleAspectFill
         self.backgroundColor = .white
     }
