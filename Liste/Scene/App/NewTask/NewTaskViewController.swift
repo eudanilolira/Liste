@@ -43,7 +43,17 @@ class NewTaskViewController: UIViewController {
     
     func setupTextFieldDelegate(){
         mainView.textFieldView.delegate = self
+        mainView.dateTextField.setInputViewDatePicker(target: self, selector: #selector(tapDone))
     }
+    
+    @objc func tapDone() {
+           if let datePicker = self.mainView.dateTextField.inputView as? UIDatePicker { // 2-1
+               let dateformatter = DateFormatter() // 2-2
+               dateformatter.dateStyle = .medium // 2-3
+               self.mainView.dateTextField.text = dateformatter.string(from: datePicker.date) //2-4
+           }
+        self.mainView.dateTextField.resignFirstResponder() // 2-5
+       }
     
 }
 

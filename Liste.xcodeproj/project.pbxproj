@@ -41,6 +41,8 @@
 		9FA7C4B7273B4BFB009B62E3 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7C4B6273B4BFB009B62E3 /* OnboardingCoordinator.swift */; };
 		9FC2EC272743240800F33991 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC2EC262743240800F33991 /* AppCoordinator.swift */; };
 		FE169B70273D70E200A8C7C1 /* RoutineCellComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE169B6F273D70E200A8C7C1 /* RoutineCellComponent.swift */; };
+		FE3F8E0C2746CDF800B8A3A6 /* LabelComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3F8E0B2746CDF800B8A3A6 /* LabelComponent.swift */; };
+		FE3F8E0E2746E76900B8A3A6 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3F8E0D2746E76900B8A3A6 /* TextFieldExtension.swift */; };
 		FEB3CF41273EE4D70028EAD1 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3CF40273EE4D70028EAD1 /* Routine.swift */; };
 		FEB3CF44273F09970028EAD1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3CF43273F09970028EAD1 /* ColorExtension.swift */; };
 		FEB3CF53273F113C0028EAD1 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEB3CF52273F113C0028EAD1 /* DMSans-Medium.ttf */; };
@@ -88,6 +90,8 @@
 		BE030D4902E5683D2760701F /* Pods-Liste.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liste.debug.xcconfig"; path = "Target Support Files/Pods-Liste/Pods-Liste.debug.xcconfig"; sourceTree = "<group>"; };
 		EE78EF999F61CC387D09FC31 /* Pods_Liste.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Liste.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE169B6F273D70E200A8C7C1 /* RoutineCellComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCellComponent.swift; sourceTree = "<group>"; };
+		FE3F8E0B2746CDF800B8A3A6 /* LabelComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelComponent.swift; sourceTree = "<group>"; };
+		FE3F8E0D2746E76900B8A3A6 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		FEB3CF40273EE4D70028EAD1 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		FEB3CF43273F09970028EAD1 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		FEB3CF52273F113C0028EAD1 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 			children = (
 				9F951991273D5AEA0071D2E5 /* ButtonComponent.swift */,
 				FE169B6F273D70E200A8C7C1 /* RoutineCellComponent.swift */,
+				FE3F8E0B2746CDF800B8A3A6 /* LabelComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 				FEB3CF43273F09970028EAD1 /* ColorExtension.swift */,
 				FEB3CF58273F13660028EAD1 /* Font.swift */,
 				9F9993592743E98300F12DFF /* Tabs.swift */,
+				FE3F8E0D2746E76900B8A3A6 /* TextFieldExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 				9F04716B273A08910099A5E5 /* MainCoordinator.swift in Sources */,
 				9FA7C4B3273B4B2F009B62E3 /* OnboardingView.swift in Sources */,
 				9F9993582743E85300F12DFF /* NewTaskViewController.swift in Sources */,
+				FE3F8E0E2746E76900B8A3A6 /* TextFieldExtension.swift in Sources */,
 				9FC2EC272743240800F33991 /* AppCoordinator.swift in Sources */,
 				9F01154A2744236000CED48B /* NewTaskView.swift in Sources */,
 				9F951984273D41E10071D2E5 /* SetRoutineView.swift in Sources */,
@@ -457,6 +464,7 @@
 				9F951986273D41EB0071D2E5 /* SetRoutineViewController.swift in Sources */,
 				9F0471562739F88B0099A5E5 /* Liste.xcdatamodeld in Sources */,
 				9F04716D273A08F80099A5E5 /* Coordinator.swift in Sources */,
+				FE3F8E0C2746CDF800B8A3A6 /* LabelComponent.swift in Sources */,
 				9F99935A2743E98300F12DFF /* Tabs.swift in Sources */,
 				9F9993562743E83D00F12DFF /* ProfileViewController.swift in Sources */,
 				FE169B70273D70E200A8C7C1 /* RoutineCellComponent.swift in Sources */,
