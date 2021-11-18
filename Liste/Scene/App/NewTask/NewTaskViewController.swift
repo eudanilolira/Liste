@@ -30,6 +30,8 @@ class NewTaskViewController: UIViewController {
         self.mainView = NewTaskView()
         super.init(nibName: nil, bundle: nil)
         self.setupActions()
+        
+        setupTextFieldDelegate()
     }
     
     required init?(coder: NSCoder) {
@@ -39,10 +41,18 @@ class NewTaskViewController: UIViewController {
     func setupActions() {
     }
     
+    func setupTextFieldDelegate(){
+        mainView.textFieldView.delegate = self
+    }
+    
 }
 
 extension NewTaskViewController {
     enum Event {
         case newTask
     }
+}
+
+extension NewTaskViewController: UITextFieldDelegate {
+    
 }

@@ -261,8 +261,8 @@
 		9F9993522743E81800F12DFF /* NewTask */ = {
 			isa = PBXGroup;
 			children = (
-				9F9993572743E85300F12DFF /* NewTaskViewController.swift */,
 				9F0115492744236000CED48B /* NewTaskView.swift */,
+				9F9993572743E85300F12DFF /* NewTaskViewController.swift */,
 				9F01154B2744236A00CED48B /* NewTaskViewModel.swift */,
 			);
 			path = NewTask;
