@@ -31,6 +31,7 @@ class PriorityCellComponent: UITableViewCell, CodeView {
         label.font = Font.details
         return label
     }()
+
     let tagComponent = TagComponent(tag: .deliverable)
     
     let progressView: UIProgressView = {
@@ -72,6 +73,21 @@ class PriorityCellComponent: UITableViewCell, CodeView {
     }()
     
     
+    var steps: String {
+        get { self.steps }
+        set { tasksLabelView.text = newValue }
+    }
+    
+    var duration: Int16 {
+        get { self.duration }
+        set { hourLabelView.text = "\(newValue) horas" }
+    }
+    
+    var title: String {
+        get { self.title }
+        set { titleView.text = newValue }
+    }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
@@ -104,9 +120,7 @@ class PriorityCellComponent: UITableViewCell, CodeView {
         taskImageView.translatesAutoresizingMaskIntoConstraints = false
         tasksLabelView.translatesAutoresizingMaskIntoConstraints = false
         progressView.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        
+
         let constraints = [
             taskView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
             taskView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
@@ -121,7 +135,9 @@ class PriorityCellComponent: UITableViewCell, CodeView {
             subtitleView.topAnchor.constraint(equalTo: taskView.topAnchor, constant: 20),
             
             tagComponent.topAnchor.constraint(equalTo: titleView.bottomAnchor, constant: 8),
-            tagComponent.leadingAnchor.constraint(equalTo: taskView.leadingAnchor, constant: 14),
+            tagComponent.leadingAnchor.constraint(equalTo: titleView.leadingAnchor),
+            tagComponent.widthAnchor.constraint(equalToConstant: CGFloat(tagComponent.getWidth())),
+            tagComponent.heightAnchor.constraint(equalToConstant: 20),
     
             clockImageView.bottomAnchor.constraint(equalTo: taskImageView.topAnchor, constant: -8 ),
             clockImageView.leadingAnchor.constraint(equalTo: taskView.leadingAnchor, constant: 14),

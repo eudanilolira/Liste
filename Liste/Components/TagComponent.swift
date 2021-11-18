@@ -14,6 +14,7 @@ class TagComponent: UIView, CodeView {
         let label = UILabel()
         label.textColor = .raisinBlack
         label.font = Font.tagFont
+        label.backgroundColor = .offWhite
         return label
     }()
     
@@ -34,11 +35,8 @@ class TagComponent: UIView, CodeView {
     
     func setupConstraints() {
         titleView.translatesAutoresizingMaskIntoConstraints = false
-        self.translatesAutoresizingMaskIntoConstraints = false
         
         let constraints = [
-            self.heightAnchor.constraint(equalTo: self.heightAnchor, constant: 22),
-            self.widthAnchor.constraint(equalToConstant: CGFloat(getWidth()) ),
             titleView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             titleView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
         ]
@@ -58,7 +56,7 @@ class TagComponent: UIView, CodeView {
     }
     func setupAdditionalConfiguration() {
         self.backgroundColor = .offWhite
-        self.layer.cornerRadius = 100
+        self.layer.cornerRadius = 10
     }
     
     
