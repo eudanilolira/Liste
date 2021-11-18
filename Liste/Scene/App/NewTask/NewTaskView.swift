@@ -99,16 +99,10 @@ class NewTaskView: UIView, CodeView {
         lineView.layer.cornerRadius = 15
         
         dateTextField.font = Font.subtitle
+        dateTextField.textColor = .raisinBlack
         dateTextField.layer.cornerRadius = 10
         dateTextField.backgroundColor = .antiqueWhite
         dateTextField.textAlignment = .center
-        
-        
-        //datePicker.datePickerMode = .date
-        //datePicker.backgroundColor = .antiqueWhite
-        //datePicker.layer.cornerRadius = 10
-        //datePicker.tintColor = .raisinBlack
-        //datePicker.contentMode = .scaleAspectFill
         
     }
     
