@@ -43,14 +43,25 @@ class NewTaskViewController: UIViewController {
     
     func setupTextFieldDelegate(){
         mainView.textFieldView.delegate = self
-        mainView.dateTextField.setInputViewDatePicker(target: self, selector: #selector(tapDone))
+        mainView.dateTextField.setInputViewDatePicker(target: self, selector: #selector(dateDone))
+        mainView.hourTextField.setInputViewHourPicker(target: self, selector: #selector(hourDone))
     }
     
-    @objc func tapDone() {
+    @objc func dateDone() {
            if let datePicker = self.mainView.dateTextField.inputView as? UIDatePicker { // 2-1
                let dateformatter = DateFormatter() // 2-2
                dateformatter.dateStyle = .medium // 2-3
                self.mainView.dateTextField.text = dateformatter.string(from: datePicker.date) //2-4
+           }
+        self.mainView.dateTextField.resignFirstResponder() // 2-5
+       }
+    
+    @objc func hourDone() {
+           if let hourPicker = self.mainView.dateTextField.inputView as? UIDatePicker { // 2-1
+               let hourFormatter = DateFormatter()
+               hourFormatter.timeStyle = .short
+               //self.mainView.hourTextField.text = hourFormatter.string(from: hourPicker.date) //tem que arrumar essa linha
+               self.mainView.hourTextField.text = hourFormatter.string(from: hourPicker.date)
            }
         self.mainView.dateTextField.resignFirstResponder() // 2-5
        }
