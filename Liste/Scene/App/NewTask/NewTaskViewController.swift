@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class NewTaskViewController: UIViewController {
+class NewTaskViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Properties
     var mainView: NewTaskView
@@ -42,23 +42,52 @@ class NewTaskViewController: UIViewController {
     
     func setupActions() {
         mainView.saveButton.addTarget(self, action: #selector(save), for: .touchUpInside)
+        mainView.sliderView.addTarget(self, action: #selector(chooseDuration), for: .allTouchEvents)
     }
     
     @objc func save() {
-        TaskManager.shared.create(
-            date: selectedDate,
-            title: mainView.textFieldView.text ?? "Task sem nome", //TODO: Não permitir salvar sem nome
-            deliverable: mainView.switchView.isOn,
-            priority: mainView.radioButtonGroup.content?.rawValue,
-            time: selectedHour,
-            duration: Int16(mainView.sliderView.value) //TODO: Verifciar isso
-        )
+        
+        if mainView.textFieldView.text != "" {
+            let task = TaskManager.shared.create(
+                date: selectedDate,
+                title: mainView.textFieldView.text!,
+                deliverable: mainView.switchView.isOn,
+                priority: mainView.radioButtonGroup.content?.rawValue,
+                time: selectedHour,
+                duration: Int16(mainView.sliderView.value) //TODO: Verifciar isso
+            )
+            
+            if let _ = task {
+                clearFields()
+                showAlert(title: "Sucesso", message: "Task criada com sucesso!")
+                
+            } else {
+                showAlert(title: "Erro", message: "Não foi possível criar esssa task, tente novamente")
+            }
+            
+        } else {
+            showAlert(title: "Erro", message: "Defina um título para criar sua task")
+        }
     }
     
     func setupTextFieldDelegate(){
         mainView.textFieldView.delegate = self
         mainView.dateTextField.setInputViewDatePicker(target: self, selector: #selector(dateDone))
         mainView.hourTextField.setInputViewHourPicker(target: self, selector: #selector(hourDone))
+    }
+
+    @objc func chooseDuration() {
+        mainView.mutableTimeLabelView.text = "\(round(mainView.sliderView.value))hrs"
+    }
+    private func clearFields(){
+        mainView.textFieldView.text = ""
+        mainView.switchView.isOn = true
+        mainView.sliderView.value = 0
+        mainView.dateTextField.text = ""
+        mainView.hourTextField.text = ""
+        
+        selectedHour = nil
+        selectedDate = nil
     }
         
 }
@@ -91,6 +120,12 @@ extension NewTaskViewController {
     }
 }
 
-extension NewTaskViewController: UITextFieldDelegate {
-    
+extension NewTaskViewController {
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok",
+                                      style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+
 }

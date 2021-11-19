@@ -164,14 +164,16 @@ class NewTaskView: UIView, CodeView {
         hourTextField.textAlignment = .center
         
         sliderView.tintColor = .tangerine
+        sliderView.maximumValue = 24
+        sliderView.minimumValue = 1
         
         fixedTimeLabelView.textColor = .raisinBlack
         fixedTimeLabelView.font = Font.details
-        fixedTimeLabelView.text = "0"
+        fixedTimeLabelView.text = "1 hr"
         
         mutableTimeLabelView.textColor = .raisinBlack
         mutableTimeLabelView.font = Font.details
-        mutableTimeLabelView.text = "x h" //esse texto tem que mudar conforme o slider muda
+        mutableTimeLabelView.text = "24 hrs"
     }
     
     
