@@ -26,8 +26,8 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-        //TODO: Verificar se o usuário já viu o onboarding
-        self.navigate(to: .tab) //TODO: Lembrar de mudar isso para .onboarding
+        let didFinishOnboarding = UserDefaults.standard.bool(forKey: "didFinishOnboarding")
+        self.navigate(to: !didFinishOnboarding ? .tab : .onboarding)
     }
         
     func navigate(to route: Route) {
