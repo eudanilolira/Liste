@@ -86,7 +86,8 @@ class OnboardingCoordinator: Coordinator {
                 subtitle: "Você já pode adicionar suas tasks e organizar sua rotina. O resto é com a gente!",
                 image: UIImage(named: "fourthOnboarding"),
                 nextPage: .dismiss,
-                showButton: true
+                showButton: true,
+                buttonTitle: "Começar"
             )
         
         case .dismiss:
@@ -101,7 +102,8 @@ extension OnboardingCoordinator {
                                  subtitle: String,
                                  image: UIImage?,
                                  nextPage: Route, pageNumber: Int? = nil,
-                                 showButton: Bool = false) {
+                                 showButton: Bool = false,
+                                 buttonTitle: String? = nil) {
 
         let onboardingVC = OnboardingViewController(
             viewModel: .init(coordinator: self, nextPage: nextPage),
@@ -111,7 +113,10 @@ extension OnboardingCoordinator {
             pageNumber: pageNumber,
             showButton: showButton
         )
-
+        if let titleButton = buttonTitle {
+            onboardingVC.mainView.buttonTitle = buttonTitle
+        }
+       
         navigationController.pushViewController(onboardingVC, animated: true)
     }
 }

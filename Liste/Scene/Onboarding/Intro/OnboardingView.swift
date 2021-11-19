@@ -8,6 +8,7 @@
 import UIKit
 
 class OnboardingView: UIView, CodeView {
+   
     private let imageView: UIImageView = UIImageView()
     private let titleView: UILabel = UILabel()
     private let subtitleView: UILabel = UILabel()
@@ -19,7 +20,10 @@ class OnboardingView: UIView, CodeView {
         
         return pageControl
     }()
-
+    var buttonTitle: String? {
+        get {self.buttonTitle}
+        set {buttonView.setTitle(newValue, for: .normal)}
+    }
     var title: String? {
         get { titleView.text}
         set { titleView.text = newValue}
