@@ -25,11 +25,12 @@ class RoutineCellComponent: UITableViewCell, CodeView {
     
     let buttonView: UIButton = {
         let button = UIButton()
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.raisinBlack, for: .normal)
+        button.titleLabel?.font = Font.button
         button.backgroundColor = .clear
         button.layer.cornerRadius = 10
         button.layer.borderWidth = 2
-        button.layer.borderColor = UIColor.orange.cgColor
+        button.layer.borderColor = UIColor.tangerine.cgColor
         return button
     }()
     
@@ -39,18 +40,18 @@ class RoutineCellComponent: UITableViewCell, CodeView {
     
     func setupConstraints() {
         buttonView.translatesAutoresizingMaskIntoConstraints = false
-    
+        
         
         let constraints = [
-           buttonView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
-           buttonView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-           buttonView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 29),
-           buttonView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -29),
-           buttonView.heightAnchor.constraint(equalToConstant: 100)
+            buttonView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
+            buttonView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            buttonView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 29),
+            buttonView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -29),
+            buttonView.heightAnchor.constraint(equalToConstant: 100)
         ]
         
         NSLayoutConstraint.activate(constraints)
-       
+        
     }
     
     func setupAdditionalConfiguration() {

@@ -12,21 +12,21 @@ class ButtonComponent: UIButton {
         super.init(frame: .zero)
         
         self.setTitle(title, for: .normal)
-        self.backgroundColor = .orange //TODO: Modificar cor
-        self.titleLabel?.font = .systemFont(ofSize: 20)
-        self.titleLabel?.textColor = .black
+        self.backgroundColor = .tangerine
+        self.titleLabel?.font = Font.button
+        self.setTitleColor(.raisinBlack, for: .normal)
         self.layer.cornerRadius = 10
     }
     
     func disable() {
-        self.backgroundColor = .gray //TODO: Modificar Cor
-        self.titleLabel?.textColor = .darkGray //TODO: Modificar Cor
+        self.backgroundColor = .lightGray
+        self.setTitleColor(.offWhite, for: .normal)
         self.isEnabled = false
     }
     
     func enable() {
-        self.backgroundColor = .orange //TODO: Modificar Cor
-        self.titleLabel?.textColor = .black //TODO: Modificar Cor
+        self.backgroundColor = .tangerine
+        self.setTitleColor(.raisinBlack, for: .normal)
         self.isEnabled = true
     }
     
@@ -34,7 +34,7 @@ class ButtonComponent: UIButton {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         let constraints = [
-            self.bottomAnchor.constraint(equalTo: superview!.bottomAnchor, constant: -67),
+            self.bottomAnchor.constraint(equalTo: superview!.bottomAnchor, constant: -120),
             self.centerXAnchor.constraint(equalTo: superview!.centerXAnchor),
             self.heightAnchor.constraint(equalToConstant: 51),
             self.widthAnchor.constraint(equalTo: superview!.widthAnchor, multiplier: 0.9),

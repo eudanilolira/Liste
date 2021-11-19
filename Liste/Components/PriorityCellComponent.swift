@@ -20,7 +20,7 @@ class PriorityCellComponent: UITableViewCell, CodeView {
         let label = UILabel()
         label.text = "Task Name"
         label.textColor = .raisinBlack
-        label.font = Font.buttonFont
+        label.font = Font.button
         return label
     }()
     
