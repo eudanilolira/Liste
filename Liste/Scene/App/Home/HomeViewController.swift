@@ -111,6 +111,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! TodayCellComponent
+            let task = otherTasks[indexPath.row]
+            cell.title = task.title ?? ""
+            cell.subtitle = task.time ?? Date.now //TODO: Ver isso aqui
             return cell
         }
     }
