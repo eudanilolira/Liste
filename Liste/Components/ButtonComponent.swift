@@ -12,21 +12,21 @@ class ButtonComponent: UIButton {
         super.init(frame: .zero)
         
         self.setTitle(title, for: .normal)
-        self.backgroundColor = .orange //TODO: Modificar cor
-        self.titleLabel?.font = .systemFont(ofSize: 20)
-        self.titleLabel?.textColor = .black
+        self.backgroundColor = .tangerine
+        self.titleLabel?.font = Font.button
+        self.setTitleColor(.raisinBlack, for: .normal)
         self.layer.cornerRadius = 10
     }
     
     func disable() {
-        self.backgroundColor = .gray //TODO: Modificar Cor
-        self.titleLabel?.textColor = .darkGray //TODO: Modificar Cor
+        self.backgroundColor = .lightGray
+        self.setTitleColor(.offWhite, for: .normal)
         self.isEnabled = false
     }
     
     func enable() {
-        self.backgroundColor = .orange //TODO: Modificar Cor
-        self.titleLabel?.textColor = .black //TODO: Modificar Cor
+        self.backgroundColor = .tangerine
+        self.setTitleColor(.raisinBlack, for: .normal)
         self.isEnabled = true
     }
     

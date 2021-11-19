@@ -59,7 +59,7 @@ class SetTimeView: UIView, CodeView {
             stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 115),
             stackView.rightAnchor.constraint(equalTo: self.rightAnchor),
             stackView.leftAnchor.constraint(equalTo: self.leftAnchor),
-            
+            //TODO: como adicionar constraint so no titulo?
             slider.widthAnchor.constraint(equalToConstant: 300),
             slider.heightAnchor.constraint(equalToConstant: 300),
             
@@ -74,29 +74,31 @@ class SetTimeView: UIView, CodeView {
     func setupAdditionalConfiguration() {
         titleLabel.text = "Conte sobre seu dia a dia"
         subtitleLabel.text = "Quanto tempo dedicará para:"
+        titleLabel.textAlignment = .justified
+        subtitleLabel.textAlignment = .justified
         
-        categoryLabel.font = .boldSystemFont(ofSize: 24)
-        titleLabel.font = .boldSystemFont(ofSize: 28)
-        subtitleLabel.font = .systemFont(ofSize: 24)
+        categoryLabel.font = Font.category
+        titleLabel.font = Font.title
+        subtitleLabel.font = Font.subtitle
         
-        categoryLabel.textColor = .black
-        titleLabel.textColor = .black
-        subtitleLabel.textColor = .black
+        categoryLabel.textColor = .raisinBlack
+        titleLabel.textColor = .raisinBlack
+        subtitleLabel.textColor = .raisinBlack
         
         self.backgroundColor = .white
         
-        currentValueLabel.textColor = .black
-        currentValueLabel.font = .boldSystemFont(ofSize: 32)
+        currentValueLabel.textColor = .raisinBlack
+        currentValueLabel.font = Font.currentValue
         currentValueLabel.text = "\(Int(slider.currentValue))hrs"
         
         slider.currentValue = 1
         slider.maximumValue = 24
         slider.minimumValue = 1
         slider.maximumAngle = 300.0
-        slider.filledColor = UIColor(red: 255 / 255.0, green: 149 / 255.0, blue: 10 / 255.0, alpha: 1.0)
-        slider.handleColor = UIColor(red: 255 / 255.0, green: 255 / 255.0, blue: 255 / 255.0, alpha: 1.0)
+        slider.filledColor = .tangerine
+        slider.handleColor = .offWhite
         slider.handleType = MSCircularSliderHandleType.largeCircle
-        slider.unfilledColor = UIColor(red: 255 / 255.0, green: 237 / 255.0, blue: 214 / 255.0, alpha: 1.0)
+        slider.unfilledColor = .antiqueWhite
         slider.handleEnlargementPoints = 12
         slider.lineWidth = 20
     }

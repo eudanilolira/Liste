@@ -8,6 +8,7 @@
 import UIKit
 
 class OnboardingView: UIView, CodeView {
+   
     private let imageView: UIImageView = UIImageView()
     private let titleView: UILabel = UILabel()
     private let subtitleView: UILabel = UILabel()
@@ -19,7 +20,10 @@ class OnboardingView: UIView, CodeView {
         
         return pageControl
     }()
-
+    var buttonTitle: String? {
+        get {self.buttonTitle}
+        set {buttonView.setTitle(newValue, for: .normal)}
+    }
     var title: String? {
         get { titleView.text}
         set { titleView.text = newValue}
@@ -80,7 +84,7 @@ class OnboardingView: UIView, CodeView {
             imageView.heightAnchor.constraint(equalToConstant: 218),
             imageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.9),
             
-            titleView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 24),
+            titleView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 48),
             titleView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
 
             subtitleView.topAnchor.constraint(equalTo: titleView.bottomAnchor, constant: 24),
@@ -88,7 +92,7 @@ class OnboardingView: UIView, CodeView {
             subtitleView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.9),
             
             pageControl.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            pageControl.topAnchor.constraint(equalTo: subtitleView.bottomAnchor, constant: 24)
+            pageControl.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -56)
         ]
         
         NSLayoutConstraint.activate(constraints)
@@ -97,15 +101,16 @@ class OnboardingView: UIView, CodeView {
     
     func setupAdditionalConfiguration() {
         subtitleView.numberOfLines = 0
-        subtitleView.font = .systemFont(ofSize: 20)
+        subtitleView.font = Font.body
+        subtitleView.textAlignment = .justified
         
         titleView.numberOfLines = 0
-        titleView.font = .boldSystemFont(ofSize: 28)
+        titleView.font = Font.title
         
         pageControl.pageIndicatorTintColor = .gray
         pageControl.currentPageIndicatorTintColor = .tangerine
 
         imageView.contentMode = .scaleAspectFill
-        self.backgroundColor = .white
+        self.backgroundColor = .offWhite
     }
 }

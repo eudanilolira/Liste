@@ -66,7 +66,7 @@ extension SetRoutineViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! RoutineCellComponent
-        cell.buttonView.backgroundColor = .orange
+        cell.buttonView.backgroundColor = .tangerine
         selectActivity(index: indexPath.row)
     }
     

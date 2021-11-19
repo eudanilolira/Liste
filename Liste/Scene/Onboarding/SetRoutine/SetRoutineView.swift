@@ -63,13 +63,16 @@ class SetRoutineView: UIView, CodeView {
         tableView.rowHeight = 90
         tableView.allowsMultipleSelection = true
         
-        self.backgroundColor = .white
+        self.backgroundColor = .offWhite
         
         titleView.text = "Conte sobre o seu dia a dia"
-        titleView.font = .boldSystemFont(ofSize: 28)
+        titleView.font = Font.title
+        titleView.textColor = .raisinBlack
         
-        subtitleView.text = "No meu dia a dia, eu tenho/desejo ter tempo para:"
-        subtitleView.font = .systemFont(ofSize: 24)
+        subtitleView.text = "No meu dia a dia, eu quero ter tempo para:"
+        subtitleView.textAlignment = .justified
+        subtitleView.font = Font.subtitle
+        subtitleView.textColor = .raisinBlack
         subtitleView.numberOfLines = 0
         
         

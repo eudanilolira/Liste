@@ -29,7 +29,7 @@ class TodayCellComponent: UITableViewCell, CodeView {
     let titleView: UILabel = {
         let label = UILabel()
         label.textColor = .raisinBlack
-        label.font = Font.buttonFont
+        label.font = Font.button
         return label
     }()
     
