@@ -56,7 +56,7 @@ enum Tabs {
         case .newTask:
             return UIImage(systemName: "plus.circle.fill")!
         case .profile:
-            return UIImage(systemName: "gearshape")!
+            return UIImage(systemName: "person")!
         }
     }
     // Add tab icon selected / deselected color

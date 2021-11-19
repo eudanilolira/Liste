@@ -28,7 +28,7 @@ class OnboardingCoordinator: Coordinator {
         switch route {
         case .welcome:
             createOnboardingIntroVC(
-                title: "Bem vindo",
+                title: "Bem-vindo",
                 subtitle: "Liste é um app para anotar suas tarefas de forma a respeitar sua rotina e suas necessidades",
                 image: UIImage(named: "firstOnboarding"),
                 nextPage: .knowYourPriorities,
@@ -37,7 +37,7 @@ class OnboardingCoordinator: Coordinator {
         case .knowYourPriorities:
             createOnboardingIntroVC(
                 title: "Saiba suas prioridades",
-                subtitle: "O app avalia quais as tarefas devem ser feitas antes para se evitar a correria e ansiedade.",
+                subtitle: "O app avalia quais tarefas devem ser feitas antes para se evitar a correria e ansiedade.",
                 image: UIImage(named: "secondOnboarding"),
                 nextPage: .rememberToDeliver,
                 pageNumber: 1
@@ -45,7 +45,7 @@ class OnboardingCoordinator: Coordinator {
         case .rememberToDeliver:
             createOnboardingIntroVC(
                 title: "Não deixe de entregar",
-                subtitle: "Cada task possui a possibilidade de ser entregável. Assim, você será lembrado com antecedência e evitará atrasos.",
+                subtitle: "Cada task possui a possibilidade de ser entregável. Assim, você será lembrado com antecedência destas atividades e evitará atrasos.",
                 image: UIImage(named: "thirdOnboarding"),
                 nextPage: .setRoutine,
                 pageNumber: 2,
@@ -83,7 +83,7 @@ class OnboardingCoordinator: Coordinator {
         case .allReady:
             createOnboardingIntroVC(
                 title: "Estamos prontos!",
-                subtitle: "Agora é só adicionar suas tasks e organizar sua rotina!",
+                subtitle: "Você já pode adicionar suas tasks e organizar sua rotina. O resto é com a gente!",
                 image: UIImage(named: "fourthOnboarding"),
                 nextPage: .dismiss,
                 showButton: true
