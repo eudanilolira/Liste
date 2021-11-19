@@ -55,18 +55,19 @@ class AppCoordinator: NSObject, Coordinator {
                     self?.selectPage(.newTask)
                 }
             }
-                        
+            
             navController.pushViewController(readyVC, animated: true)
 
         case .newTask:
-            let steadyVC = NewTaskViewController(viewModel: .init(coordinator: self))
-            steadyVC.didSendEventClosure = { [weak self] event in
+            let newTaskVC = NewTaskViewController(viewModel: .init(coordinator: self))
+            
+            newTaskVC.didSendEventClosure = { [weak self] event in
                 switch event {
                 case .newTask:
                     self?.selectPage(.profile)
                 }
             }
-            navController.pushViewController(steadyVC, animated: true)
+            navController.pushViewController(newTaskVC, animated: true)
             
         case .profile:
             let goVC = ProfileViewController(viewModel: .init(coordinator: self))

@@ -39,6 +39,7 @@
 		9FA7C4B3273B4B2F009B62E3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7C4B2273B4B2F009B62E3 /* OnboardingView.swift */; };
 		9FA7C4B5273B4B39009B62E3 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7C4B4273B4B39009B62E3 /* OnboardingViewModel.swift */; };
 		9FA7C4B7273B4BFB009B62E3 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA7C4B6273B4BFB009B62E3 /* OnboardingCoordinator.swift */; };
+		9FAA292D274724A1004764C8 /* RadioButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAA292C274724A1004764C8 /* RadioButtonComponent.swift */; };
 		9FC2EC272743240800F33991 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC2EC262743240800F33991 /* AppCoordinator.swift */; };
 		FE169B70273D70E200A8C7C1 /* RoutineCellComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE169B6F273D70E200A8C7C1 /* RoutineCellComponent.swift */; };
 		FE3F8E0C2746CDF800B8A3A6 /* LabelComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3F8E0B2746CDF800B8A3A6 /* LabelComponent.swift */; };
@@ -86,6 +87,7 @@
 		9FA7C4B2273B4B2F009B62E3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9FA7C4B4273B4B39009B62E3 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		9FA7C4B6273B4BFB009B62E3 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		9FAA292C274724A1004764C8 /* RadioButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonComponent.swift; sourceTree = "<group>"; };
 		9FC2EC262743240800F33991 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BE030D4902E5683D2760701F /* Pods-Liste.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Liste.debug.xcconfig"; path = "Target Support Files/Pods-Liste/Pods-Liste.debug.xcconfig"; sourceTree = "<group>"; };
 		EE78EF999F61CC387D09FC31 /* Pods_Liste.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Liste.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +241,7 @@
 				9F951991273D5AEA0071D2E5 /* ButtonComponent.swift */,
 				FE169B6F273D70E200A8C7C1 /* RoutineCellComponent.swift */,
 				FE3F8E0B2746CDF800B8A3A6 /* LabelComponent.swift */,
+				9FAA292C274724A1004764C8 /* RadioButtonComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				9F04714E2739F88B0099A5E5 /* SceneDelegate.swift in Sources */,
 				9F0471662739F9320099A5E5 /* CodeView.swift in Sources */,
 				9F0115562744370700CED48B /* UserManager.swift in Sources */,
+				9FAA292D274724A1004764C8 /* RadioButtonComponent.swift in Sources */,
 				9FA7C4B7273B4BFB009B62E3 /* OnboardingCoordinator.swift in Sources */,
 				9F01154E2744237400CED48B /* ProfileView.swift in Sources */,
 				9F951986273D41EB0071D2E5 /* SetRoutineViewController.swift in Sources */,

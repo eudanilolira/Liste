@@ -41,6 +41,9 @@ class NewTaskViewController: UIViewController {
     func setupActions() {
     }
     
+    func save() {
+    }
+    
     func setupTextFieldDelegate(){
         mainView.textFieldView.delegate = self
         mainView.dateTextField.setInputViewDatePicker(target: self, selector: #selector(dateDone))

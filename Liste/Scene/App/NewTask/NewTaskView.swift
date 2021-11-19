@@ -8,15 +8,20 @@
 import UIKit
 
 class NewTaskView: UIView, CodeView {
-    private let titleLabelView = LabelComponent(text: "Título")
-    private let deliverableLabelView = LabelComponent(text: "Entregável")
-    private let dateLabelView = LabelComponent(text: "Data")
-    private let timeLabelView = LabelComponent(text: "Hora")
-    private let durationLabelView = LabelComponent(text: "Duração")
-    private let priorityLabelView = LabelComponent(text: "Prioridade")
-    private let stepsLabelView = LabelComponent(text: "Etapas")
+    let titleLabelView = LabelComponent(text: "Título")
+    let deliverableLabelView = LabelComponent(text: "Entregável")
+    let dateLabelView = LabelComponent(text: "Data")
+    let timeLabelView = LabelComponent(text: "Hora")
+    let durationLabelView = LabelComponent(text: "Duração")
+    let priorityLabelView = LabelComponent(text: "Prioridade")
+    let stepsLabelView = LabelComponent(text: "Etapas")
+    let radioButtonGroup = RadioButtonGroup(buttons: [
+        .init(value: .low),
+        .init(value: .medium),
+        .init(value: .high)
+    ])
     let textFieldView: UITextField = UITextField()
-    private let lineView: UIView = UIView()
+    let lineView: UIView = UIView()
     let dateTextField: UITextField = UITextField()
     let hourTextField: UITextField = UITextField()
     let sliderView: UISlider = UISlider()
@@ -48,6 +53,7 @@ class NewTaskView: UIView, CodeView {
         self.addSubview(mutableTimeLabelView)
         self.addSubview(fixedTimeLabelView)
         self.addSubview(priorityLabelView)
+        self.addSubview(radioButtonGroup)
     }
     
     func setupConstraints() {
@@ -65,6 +71,7 @@ class NewTaskView: UIView, CodeView {
         mutableTimeLabelView.translatesAutoresizingMaskIntoConstraints = false
         fixedTimeLabelView.translatesAutoresizingMaskIntoConstraints = false
         priorityLabelView.translatesAutoresizingMaskIntoConstraints = false
+        radioButtonGroup.translatesAutoresizingMaskIntoConstraints = false
         
         let constraints = [
             titleLabelView.topAnchor.constraint(equalTo: self.topAnchor, constant: 115),
@@ -118,6 +125,9 @@ class NewTaskView: UIView, CodeView {
             priorityLabelView.topAnchor.constraint(equalTo: fixedTimeLabelView.bottomAnchor, constant: 24),
             priorityLabelView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 29),
             
+            radioButtonGroup.topAnchor.constraint(equalTo: priorityLabelView.bottomAnchor, constant: 24),
+            radioButtonGroup.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 29),
+            
         ]
         
         NSLayoutConstraint.activate(constraints)
@@ -159,8 +169,6 @@ class NewTaskView: UIView, CodeView {
         mutableTimeLabelView.textColor = .raisinBlack
         mutableTimeLabelView.font = Font.details
         mutableTimeLabelView.text = "x h" //esse texto tem que mudar conforme o slider muda
-        
-        
     }
     
     
