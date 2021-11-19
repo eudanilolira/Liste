@@ -34,7 +34,7 @@ class ButtonComponent: UIButton {
         self.translatesAutoresizingMaskIntoConstraints = false
         
         let constraints = [
-            self.bottomAnchor.constraint(equalTo: superview!.bottomAnchor, constant: -67),
+            self.bottomAnchor.constraint(equalTo: superview!.bottomAnchor, constant: -120),
             self.centerXAnchor.constraint(equalTo: superview!.centerXAnchor),
             self.heightAnchor.constraint(equalToConstant: 51),
             self.widthAnchor.constraint(equalTo: superview!.widthAnchor, multiplier: 0.9),

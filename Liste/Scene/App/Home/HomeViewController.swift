@@ -42,27 +42,9 @@ class HomeViewController: UIViewController {
     }
     
     func setupTasks() {
-        
-//        TaskManager.shared.create(
-//            date: Date.now,
-//            title: "Minha task do balacobaco",
-//            deliverable: false,
-//            priority: "",
-//            steps: "1/5",
-//            time: Date.now,
-//            duration: 10)
-//        
-//        TaskManager.shared.create(
-//            date: Date.now,
-//            title: "Minha task bolada",
-//            deliverable: true,
-//            priority: "",
-//            steps: "1/5",
-//            time: Date.now,
-//            duration: 10)
-        
-        priorityTasks = viewModel.tasks.filter { $0.priority == "alta" && !$0.complete }
-        otherTasks = viewModel.tasks.filter { $0.priority != "alta" && !$0.complete }
+
+        priorityTasks = viewModel.tasks.filter { $0.priority == Priority.high.rawValue && !$0.complete }
+        otherTasks = viewModel.tasks.filter { $0.priority != Priority.high.rawValue && !$0.complete }
         
         mainView.tableView.reloadData()
     }

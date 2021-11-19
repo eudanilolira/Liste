@@ -14,7 +14,9 @@ class NewTaskViewController: UIViewController {
     var mainView: NewTaskView
     var viewModel: NewTaskViewModel
     var didSendEventClosure: ((Event) -> Void)?
-    
+    var selectedDate: Date?
+    var selectedHour: Date?
+
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +41,18 @@ class NewTaskViewController: UIViewController {
     }
     
     func setupActions() {
+        mainView.saveButton.addTarget(self, action: #selector(save), for: .touchUpInside)
     }
     
-    func save() {
+    @objc func save() {
+        TaskManager.shared.create(
+            date: selectedDate,
+            title: mainView.textFieldView.text ?? "Task sem nome", //TODO: Não permitir salvar sem nome
+            deliverable: mainView.switchView.isOn,
+            priority: mainView.radioButtonGroup.content?.rawValue,
+            time: selectedHour,
+            duration: Int16(mainView.sliderView.value) //TODO: Verifciar isso
+        )
     }
     
     func setupTextFieldDelegate(){
@@ -49,31 +60,34 @@ class NewTaskViewController: UIViewController {
         mainView.dateTextField.setInputViewDatePicker(target: self, selector: #selector(dateDone))
         mainView.hourTextField.setInputViewHourPicker(target: self, selector: #selector(hourDone))
     }
-    
-    @objc func dateDone() {
-           if let datePicker = self.mainView.dateTextField.inputView as? UIDatePicker { // 2-1
-               let dateformatter = DateFormatter() // 2-2
-               dateformatter.dateStyle = .medium // 2-3
-               self.mainView.dateTextField.text = dateformatter.string(from: datePicker.date) //2-4
-           }
-        self.mainView.dateTextField.resignFirstResponder() // 2-5
-       }
-    
-    @objc func hourDone() {
-           if let hourPicker = self.mainView.dateTextField.inputView as? UIDatePicker { // 2-1
-               let hourFormatter = DateFormatter()
-               hourFormatter.timeStyle = .short
-               //self.mainView.hourTextField.text = hourFormatter.string(from: hourPicker.date) //tem que arrumar essa linha
-               self.mainView.hourTextField.text = hourFormatter.string(from: hourPicker.date)
-           }
-        self.mainView.dateTextField.resignFirstResponder() // 2-5
-       }
-    
+        
 }
 
 extension NewTaskViewController {
     enum Event {
         case newTask
+    }
+}
+
+extension NewTaskViewController {
+    @objc func dateDone() {
+        if let datePicker = self.mainView.dateTextField.inputView as? UIDatePicker {
+            let dateformatter = DateFormatter()
+            dateformatter.dateStyle = .medium
+            selectedDate = datePicker.date
+            self.mainView.dateTextField.text = dateformatter.string(from: datePicker.date)
+       }
+        self.mainView.dateTextField.resignFirstResponder() // 2-5
+    }
+    
+    @objc func hourDone() {
+           if let hourPicker = self.mainView.dateTextField.inputView as? UIDatePicker { // 2-1
+               let hourFormatter = DateFormatter()
+               hourFormatter.timeStyle = .short
+               selectedHour = hourPicker.date
+               self.mainView.hourTextField.text = hourFormatter.string(from: hourPicker.date)
+           }
+        self.mainView.dateTextField.resignFirstResponder() // 2-5
     }
 }
 

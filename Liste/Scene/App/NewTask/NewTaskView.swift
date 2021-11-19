@@ -28,6 +28,7 @@ class NewTaskView: UIView, CodeView {
     let switchView: UISwitch = UISwitch()
     let fixedTimeLabelView: UILabel = UILabel()
     let mutableTimeLabelView: UILabel = UILabel()
+    let saveButton =  ButtonComponent(title: "Salvar")
     
     init(){
         super.init(frame: .zero)
@@ -54,6 +55,7 @@ class NewTaskView: UIView, CodeView {
         self.addSubview(fixedTimeLabelView)
         self.addSubview(priorityLabelView)
         self.addSubview(radioButtonGroup)
+        self.addSubview(saveButton)
     }
     
     func setupConstraints() {
@@ -72,7 +74,7 @@ class NewTaskView: UIView, CodeView {
         fixedTimeLabelView.translatesAutoresizingMaskIntoConstraints = false
         priorityLabelView.translatesAutoresizingMaskIntoConstraints = false
         radioButtonGroup.translatesAutoresizingMaskIntoConstraints = false
-        
+
         let constraints = [
             titleLabelView.topAnchor.constraint(equalTo: self.topAnchor, constant: 115),
             titleLabelView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 29),
@@ -131,6 +133,7 @@ class NewTaskView: UIView, CodeView {
         ]
         
         NSLayoutConstraint.activate(constraints)
+        saveButton.setConstraints()
     }
     
     func setupAdditionalConfiguration() {
