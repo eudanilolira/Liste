@@ -13,4 +13,5 @@ struct Font {
     static let body = UIFont(name: "DMSans-Regular", size: 20)
     static let details = UIFont(name: "DMSans-Regular", size: 16)
     static let buttonFont = UIFont(name: "DMSans-Medium", size: 20)
+    static let tagFont = UIFont(name: "DMSans-Regular", size: 12)
 }
