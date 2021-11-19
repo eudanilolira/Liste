@@ -9,6 +9,16 @@ import UIKit
 
 class TodayCellComponent: UITableViewCell, CodeView {
     
+    var title: String {
+        get { self.title }
+        set { titleView.text = newValue }
+    }
+    
+    var subtitle: Date {
+        get { self.subtitle }
+        set { subtitleView.text = "\(newValue)hrs" }
+    }
+    
     let taskView: UIView = {
         let view = UIView()
         view.backgroundColor = .antiqueWhite
@@ -18,7 +28,6 @@ class TodayCellComponent: UITableViewCell, CodeView {
     
     let titleView: UILabel = {
         let label = UILabel()
-        label.text = "Task Name"
         label.textColor = .raisinBlack
         label.font = Font.button
         return label
@@ -26,12 +35,10 @@ class TodayCellComponent: UITableViewCell, CodeView {
     
     let subtitleView: UILabel = {
         let label = UILabel()
-        label.text = "due to 15:00"
         label.textColor = .raisinBlack
         label.font = Font.details
         return label
     }()
-    //let tagComponent = TagComponent(tag: .deliverable)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -46,14 +53,12 @@ class TodayCellComponent: UITableViewCell, CodeView {
         self.addSubview(taskView)
         taskView.addSubview(titleView)
         taskView.addSubview(subtitleView)
-        //taskView.addSubview(tagComponent)
     }
     
     func setupConstraints() {
         taskView.translatesAutoresizingMaskIntoConstraints = false
         titleView.translatesAutoresizingMaskIntoConstraints = false
         subtitleView.translatesAutoresizingMaskIntoConstraints = false
-       // tagComponent.translatesAutoresizingMaskIntoConstraints = false
         
         let constraints = [
             taskView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
@@ -67,9 +72,6 @@ class TodayCellComponent: UITableViewCell, CodeView {
             
             subtitleView.trailingAnchor.constraint(equalTo: taskView.trailingAnchor, constant: -14),
             subtitleView.topAnchor.constraint(equalTo: taskView.topAnchor, constant: 20),
-            
-            //tagComponent.topAnchor.constraint(equalTo: titleView.bottomAnchor, constant: 8),
-            //tagComponent.leadingAnchor.constraint(equalTo: taskView.leadingAnchor, constant: 14),
         ]
         
         NSLayoutConstraint.activate(constraints)
@@ -78,8 +80,4 @@ class TodayCellComponent: UITableViewCell, CodeView {
     func setupAdditionalConfiguration() {
         self.selectionStyle = .none
     }
-    
-    
-    
-    
 }

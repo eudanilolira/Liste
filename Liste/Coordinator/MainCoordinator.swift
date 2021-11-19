@@ -27,8 +27,7 @@ class MainCoordinator: Coordinator {
 
     func start() {
         let didFinishOnboarding = UserDefaults.standard.bool(forKey: "didFinishOnboarding")
-        //self.navigate(to: !didFinishOnboarding ? .tab : .onboarding)
-        self.navigate(to: .onboarding)
+        self.navigate(to: !didFinishOnboarding ? .tab : .onboarding)
     }
         
     func navigate(to route: Route) {
